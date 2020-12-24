@@ -15,7 +15,8 @@ pipeline {
 		stage("Meven Build"){
 			steps {
 				
-				sh mvn -f path/to/pom.xml "mvn clean package"
+				sh mvn -f path/to/pom.xml 
+				sh mvn "mvn clean package"
 			
 			      }  
 			    }
