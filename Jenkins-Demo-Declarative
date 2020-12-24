@@ -12,7 +12,7 @@ pipeline {
 			}
 		      }
 		
-		sgtage("Meven Build"){
+		stage("Meven Build"){
 			steps {
 				sh "mvn clean package"
 			
