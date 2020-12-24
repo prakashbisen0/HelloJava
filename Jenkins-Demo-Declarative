@@ -1,10 +1,21 @@
 pipeline {
  	  agent any
+	   environment{
+	      path = "/opt/maven/apache-maven-3.6.3/bin:$PATH"
+	  		 }
+	  
 		stages{
 		stage("Git Checkout"){
 			steps{
 			    git credentialsId: '7222e992-c2da-4457-9852-fb7b15b0d5ca', url: 'https://github.com/prakashbisen0/HelloJava.git'
 			}
-		}		     
+		}
+		
+		sgtage("Meven Build"{
+			steps {
+				sh "mvn clean package"
+			
+			      }
+	}
           }
 	}
