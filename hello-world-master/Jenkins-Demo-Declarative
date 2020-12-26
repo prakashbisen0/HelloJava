@@ -1,9 +1,5 @@
 pipeline {
  	  agent any
-	   environment{
-	      path = "/opt/maven/bin:$PATH"
-	  		 }
-	  
 		stages{
 		
 		stage("Git Checkout"){
@@ -14,8 +10,6 @@ pipeline {
 		
 		stage("Meven Build"){
 			steps {
-				
-				sh mvn -f path/to/pom.xml 
 				sh mvn "mvn clean package"
 			
 			      }  
