@@ -10,7 +10,7 @@ pipeline {
 		
 		stage("Meven Build"){
 			steps {
-				sh mvn "mvn clean package"
+				sh "mvn clean package"
 			
 			      }  
 			    }
